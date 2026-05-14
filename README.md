@@ -48,13 +48,6 @@
 <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="40" height="40"/>
 </p>
 
----
 
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=harmanankohli&show_icons=true&locale=en" alt="GitHub Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=harmanankohli&show_icons=true&locale=en&layout=compact" alt="Top Languages" />
-</p>
-
----
 
 <h3 align="center">🌟 Let's Build the Future with Responsible AI 🌟</h3>
