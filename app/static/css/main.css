@@ -1277,6 +1277,8 @@ button {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .contact__message-section .form__input,
@@ -1305,6 +1307,8 @@ button {
 .form__input,
 .form__select,
 .form__textarea {
+  width: 100%;
+  box-sizing: border-box;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
