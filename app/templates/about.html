@@ -35,8 +35,8 @@
         <div class="animate-on-scroll">
             <h2 class="section__subtitle">Download Resume</h2>
             <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-                <a href="{{ profile.resume.professional }}" class="btn btn--primary" download>Professional Resume (PDF)</a>
-                <a href="{{ profile.resume.academic }}" class="btn btn--secondary" download>Academic CV (PDF)</a>
+                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Professional.pdf') }}" class="btn btn--primary" download>Professional Resume (PDF)</a>
+                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Academic.pdf') }}" class="btn btn--secondary" download>Academic CV (PDF)</a>
             </div>
         </div>
     </div>

@@ -54,11 +54,6 @@ def register_routes(app):
     def privacy():
         return render_template('privacy.html')
 
-    @app.route('/files/<path:filename>')
-    def download_file(filename):
-        files_dir = os.path.join(app.root_path, 'static', 'files')
-        return send_from_directory(files_dir, filename)
-
     @app.route('/robots.txt')
     def robots():
         content = "User-agent: *\nAllow: /\nSitemap: " + app.config.get('SITE_URL', '') + "/sitemap.xml\n"

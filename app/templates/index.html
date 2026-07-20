@@ -20,7 +20,7 @@
             </p>
             <div class="hero__cta">
                 <a href="{{ url_for('projects') }}" class="btn btn--primary">View My Work</a>
-                <a href="{{ profile.resume.professional }}" class="btn btn--secondary" download>Download Resume</a>
+                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Professional.pdf') }}" class="btn btn--secondary" download>Download Resume</a>
             </div>
             <div class="hero__social">
                 <a href="{{ profile.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

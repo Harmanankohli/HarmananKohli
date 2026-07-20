@@ -1,0 +1,12 @@
+Harmanan_Kohli_Academic.pdf
+Harmanan_Kohli_Professional.pdf
+
+# Plans (internal only)
+plans/
+
+# Build output
+docs/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
