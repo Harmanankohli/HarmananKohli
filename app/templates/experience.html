@@ -65,29 +65,27 @@
 {% endblock %}
 {% block scripts %}
 <script>
-(function() {
-    const workBtn = document.querySelector('[data-view="work"]');
-    const researchBtn = document.querySelector('[data-view="research"]');
-    const workTimeline = document.getElementById('timeline-work');
-    const researchTimeline = document.getElementById('timeline-research');
+document.addEventListener('DOMContentLoaded', function() {
+    var workBtn = document.querySelector('[data-view="work"]');
+    var researchBtn = document.querySelector('[data-view="research"]');
+    var workTimeline = document.getElementById('timeline-work');
+    var researchTimeline = document.getElementById('timeline-research');
 
     function setActive(btn) {
-        document.querySelectorAll('.view-toggle__btn').forEach(b => b.classList.remove('view-toggle__btn--active'));
+        document.querySelectorAll('.view-toggle__btn').forEach(function(b) { b.classList.remove('view-toggle__btn--active'); });
         btn.classList.add('view-toggle__btn--active');
     }
 
-    if (workBtn && researchBtn) {
-        workBtn.addEventListener('click', function() {
-            setActive(this);
-            workTimeline.style.display = '';
-            researchTimeline.style.display = 'none';
-        });
-        researchBtn.addEventListener('click', function() {
-            setActive(this);
-            workTimeline.style.display = 'none';
-            researchTimeline.style.display = '';
-        });
-    }
-})();
+    workBtn.addEventListener('click', function() {
+        setActive(this);
+        workTimeline.style.display = '';
+        researchTimeline.style.display = 'none';
+    });
+    researchBtn.addEventListener('click', function() {
+        setActive(this);
+        workTimeline.style.display = 'none';
+        researchTimeline.style.display = '';
+    });
+});
 </script>
 {% endblock %}
