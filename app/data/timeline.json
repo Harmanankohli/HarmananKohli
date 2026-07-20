@@ -1,4 +1,10 @@
 {
+  "highlights": {
+    "years": "6+",
+    "companies": 3,
+    "research_projects": 2,
+    "domains": ["GenAI/LLM Systems", "Data Science", "Enterprise Analytics", "XAI Research"]
+  },
   "work": [
     {
       "id": "capgemini",
@@ -6,17 +12,18 @@
       "company": "Capgemini",
       "location": "Mumbai",
       "period": "Aug 2025 – Present",
-      "type": "work",
+      "current": true,
+      "summary": "Building production LLM systems — agentic workflows, RAG pipelines, and multi-agent architectures for financial and enterprise domains.",
       "bullets": [
-        "Financial document intelligence system (MFA & Sanction Letters) with Docling + LangChain",
-        "2x2 VectorDB retrieval architecture for semantic isolation",
-        "LangGraph agentic orchestration for multi-step workflows",
-        "Text-to-SQL via Bedrock Agents for hybrid structured + unstructured reasoning",
-        "AWS Lambda + Bedrock deployment with latency/cost optimization",
-        "MCP server tools in Databricks for LLM-driven workflows",
-        "AI-powered accelerator for pricing intelligence, competitor benchmarking, product discovery"
+        "Built a financial document intelligence system for Master Facility Agreements and Sanction Letters using Docling extraction + semantic chunking (LangChain) to enable long-context retrieval for 100+ page documents.",
+        "Designed a 2×2 VectorDB retrieval architecture (Working Capital vs Long-Term Finance × MFA vs Sanction Letter) to isolate semantic neighborhoods and reduce embedding interference.",
+        "Implemented agentic orchestration using LangGraph to route multi-step workflows (classification → retrieval → synthesis) with deterministic control flow and error handling.",
+        "Integrated Text-to-SQL using Bedrock Agents to support hybrid structured + unstructured reasoning (contract clauses + financial tables).",
+        "Deployed on AWS (Lambda + Bedrock LLMs) with latency, cost, and output formatting optimizations.",
+        "Implemented MCP server tools in Databricks and deployed as an internal app, enabling secure tool integration for LLM-driven workflows.",
+        "Developed an AI-powered accelerator that analyzes product images and descriptions to deliver pricing intelligence, competitor benchmarking, product discovery, go-to-market recommendations, IP risk assessment, and AI-generated marketing content through a multi-agent architecture."
       ],
-      "tech": ["LangChain", "LangGraph", "Bedrock Agents", "AWS Lambda", "VectorDB", "Docling", "Databricks"]
+      "tech": ["LangChain", "LangGraph", "Bedrock Agents", "AWS Lambda", "VectorDB", "Docling", "Text-to-SQL", "MCP", "Databricks", "DynamoDB", "CloudWatch"]
     },
     {
       "id": "sterlite",
@@ -24,13 +31,14 @@
       "company": "Sterlite Technologies",
       "location": "Mumbai",
       "period": "Oct 2024 – Apr 2025",
-      "type": "work",
+      "current": false,
+      "summary": "Applied XAI and statistical modeling to supply chain optimization, plus multimodal AI for document processing.",
       "bullets": [
-        "Safety stock optimization model (Z-score, AMC, lead time, SD)",
-        "Counterfactual Explanations (XAI) for RFQ classifications",
-        "Gemini Pro Vision POC for vendor invoice extraction"
+        "Designed a safety stock optimization model (Z-score, AMC, lead time, SD), reducing inventory holding costs and improving reorder accuracy.",
+        "Applied Counterfactual Explanations (XAI) to RFQ classifications, identifying actionable parameter shifts that improved deal conversion rates.",
+        "Built a proof-of-concept with Gemini Pro Vision to extract structured data from scanned vendor invoices, streamlining accounts payable workflows."
       ],
-      "tech": ["XAI", "Gemini Pro Vision", "Python", "Statistical Modeling"]
+      "tech": ["XAI", "Counterfactual Explanations", "Gemini Pro Vision", "Python", "Statistical Modeling", "Pandas"]
     },
     {
       "id": "tcs",
@@ -38,41 +46,60 @@
       "company": "Tata Consultancy Services",
       "location": "Mumbai",
       "period": "Jan 2020 – Jan 2024",
-      "type": "work",
+      "current": false,
+      "summary": "Delivered analytics and planning solutions within the SAP ecosystem, optimizing enterprise data pipelines and geospatial analytics.",
       "bullets": [
-        "SAP analytics and planning solutions",
-        "Data pipeline optimization (days to minutes) in SAP BPC",
-        "Geospatial analytics across SAP S4HANA, GIS, Real Estate"
+        "Delivered analytics and planning solutions within SAP ecosystem, enhancing forecasting, reporting, and decision workflows.",
+        "Reduced processing time from days to minutes by optimizing data pipelines in SAP BPC.",
+        "Integrated spatial + business + financial data across SAP S4HANA, GIS, and Real Estate modules for geospatial analytics."
       ],
-      "tech": ["SAP", "SAP BPC", "SAP S4HANA", "GIS"]
+      "tech": ["SAP BPC", "SAP S4HANA", "GIS", "SQL", "Data Pipelines", "Excel"]
     }
   ],
   "research": [
     {
       "id": "bits-dissertation",
-      "role": "Graduate Researcher (Master's Dissertation)",
-      "company": "BITS Pilani",
+      "role": "Graduate Researcher",
+      "title": "Explainable AI for Predicting Malware Infection",
+      "company": "BITS Pilani — Master's Dissertation",
       "period": "Nov 2023 – Apr 2024",
-      "type": "research",
+      "summary": "ML model on 8.9M-device Microsoft Malware dataset with GDPR-compatible explainability for cybersecurity applications.",
       "bullets": [
-        "Developed ML models on Microsoft Malware dataset (8.9M devices) with explainable AI techniques",
-        "Implemented EBM, SHAP, and LIME for GDPR-compatible model interpretability",
-        "Achieved 66.7% accuracy with 50% memory optimization via Polars-based preprocessing"
+        "Trained ML model on Microsoft Malware dataset (8.9M devices) achieving ~66.7% accuracy and ~66.4% recall, aiding proactive mitigation of data breaches and financial risks.",
+        "Applied EBM, SHAP, LIME for interpretability, producing local + global explanations with uncertainty for regulatory + trust alignment (GDPR-compatible design).",
+        "Engineered features from 4.1GB (83-field) dataset, optimizing memory usage by ~50% via columnar transformations in Pandas/Polars."
       ],
-      "tech": ["EBM", "SHAP", "LIME", "Polars", "Pandas", "scikit-learn"]
+      "tech": ["EBM", "SHAP", "LIME", "Polars", "Pandas", "scikit-learn", "XGBoost"]
     },
     {
       "id": "launchpad",
       "role": "Data Science Fellow",
       "company": "Launchpad.ai (via Fellowship.ai)",
+      "location": "Remote",
       "period": "Jan 2024 – Mar 2024",
-      "type": "research",
+      "summary": "Built a multimodal price discovery agent with RAG + tool-calling for 100K+ SKUs.",
       "bullets": [
-        "Built multimodal price discovery agent using Gemini Pro Vision (97% accuracy across 100K+ SKUs)",
-        "Implemented fallback retrieval logic: VectorDB similarity search → SerpAPI live lookup",
-        "Reduced manual price lookup effort by 50% through automated agentic workflows"
+        "Built multimodal price discovery agent using Gemini Pro Vision, achieving ~97% accuracy on internal test set.",
+        "Designed scalable RAG pipeline + VectorDB + tool-calling agent for 100K+ SKUs, reducing manual lookup effort by 50%.",
+        "Implemented fallback logic: queries VectorDB for known items and dynamically falls back to search APIs for unknown products.",
+        "Developed Selenium scrapers for product data acquisition and validation."
       ],
-      "tech": ["Gemini Pro Vision", "RAG", "VectorDB", "SerpAPI", "Selenium"]
+      "tech": ["Gemini Pro Vision", "RAG", "VectorDB", "Tool Calling", "SerpAPI", "Selenium", "Python"]
+    }
+  ],
+  "open_source": [
+    {
+      "id": "sklearn",
+      "role": "Open-Source Contributor",
+      "company": "Scikit-Learn",
+      "bullets": [
+        "Added usage examples for f_regression() to improve documentation usability — PR #28104",
+        "Added usage examples for silhouette_score() to improve documentation usability — PR #28125"
+      ],
+      "links": [
+        {"label": "PR #28104", "url": "https://github.com/scikit-learn/scikit-learn/pull/28104"},
+        {"label": "PR #28125", "url": "https://github.com/scikit-learn/scikit-learn/pull/28125"}
+      ]
     }
   ]
 }

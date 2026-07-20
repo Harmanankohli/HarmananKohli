@@ -79,6 +79,30 @@
   .about__stats {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .exp-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle__btn {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-sm) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .timeline__header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .timeline__period {
+    white-space: normal;
+  }
 }
 
 @media (min-width: 1024px) {
