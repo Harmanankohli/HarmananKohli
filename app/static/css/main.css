@@ -1077,42 +1077,107 @@ button {
 }
 
 /* Contact */
-.contact__grid {
+.contact__channels {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
 }
 
-.contact__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-.contact__item {
+.contact__channel {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all var(--transition);
 }
 
-.contact__item-icon {
+.contact__channel:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact__channel--static {
+  cursor: default;
+}
+
+.contact__channel--static:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.contact__channel-icon {
   width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.contact__channel-icon--email {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-primary);
+}
+
+.contact__channel-icon--linkedin {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+}
+
+.contact__channel-icon--github {
   background: var(--color-bg-alt);
-  font-size: 1.25rem;
+  color: var(--color-text);
 }
 
-.contact__item-label {
-  font-size: 0.85rem;
+.contact__channel-icon--location {
+  background: rgba(234, 88, 12, 0.1);
+  color: #ea580c;
+}
+
+.contact__channel-label {
+  font-size: 0.8rem;
   color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.contact__item-value {
+.contact__channel-value {
   font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact__channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-2xl);
+}
+
+.contact__section-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-lg);
+  font-weight: 700;
+}
+
+.contact__message-section {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
 }
 
 .contact__form {
@@ -1158,21 +1223,147 @@ button {
   resize: vertical;
 }
 
-.form__honeypot {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
+.contact__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  align-self: flex-start;
 }
 
-.contact__availability {
-  margin-top: var(--space-xl);
+.contact__submit svg {
+  flex-shrink: 0;
+}
+
+.contact__form-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
   padding: var(--space-lg);
-  border-radius: var(--radius-lg);
-  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-md);
+}
+
+.contact__form-status--success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #16a34a;
+}
+
+.contact__form-status--error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+}
+
+.contact__form-status--error a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.contact__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact__resume-card,
+.contact__availability-card,
+.contact__relocation-card {
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  text-align: center;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.contact__resume-desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-lg);
+}
+
+.contact__resume-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact__resume-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.contact__resume-links .btn svg {
+  flex-shrink: 0;
+}
+
+.contact__avail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.contact__avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact__avail-dot--active {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.4);
+}
+
+.contact__avail-regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.contact__relocation-desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.contact__relocation-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact__relocation-region {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.88rem;
+}
+
+.contact__relocation-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.contact__relocation-note {
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
 }
 
 /* Cookie Banner */

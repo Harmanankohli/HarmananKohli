@@ -6,6 +6,12 @@
   }
 }
 
+@media (max-width: 479px) {
+  .contact__channels {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 768px) {
   .hero__name {
     font-size: 3rem;
@@ -62,6 +68,10 @@
   .grid--3,
   .grid--4 {
     grid-template-columns: 1fr;
+  }
+
+  .contact__channels {
+    grid-template-columns: 1fr 1fr;
   }
 
   .contact__grid {

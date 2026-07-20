@@ -12,8 +12,8 @@
     "academic": "Researcher in LLM Systems, RAG, Agentic Workflows, Explainable AI, AI Security, Multimodal AI, and NLP."
   },
   "open_to": ["Full-time roles", "Research collaborations", "Consulting", "Open-source contributions"],
-  "target_regions": ["US", "EU", "UAE", "India", "Australia"],
-  "availability": "Open to opportunities in US, EU, UAE, India, Australia",
+  "target_regions": ["US", "EU", "UAE", "India", "Australia", "Singapore", "Canada"],
+  "availability": "Open to opportunities in US, EU, UAE, India, Australia, Singapore, Canada",
   "stats": [
     {"value": "6+", "label": "Years in Tech"},
     {"value": "8.9M", "label": "Device ML Model"},
