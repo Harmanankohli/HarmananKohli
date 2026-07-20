@@ -32,9 +32,10 @@ def register_routes(app):
         timeline = load_json('timeline.json')
         return render_template('experience.html', timeline=timeline)
 
-    @app.route('/education/')
-    def education():
-        return render_template('education.html')
+    @app.route('/academics/')
+    def academics():
+        academics_data = load_json('academics.json')
+        return render_template('academics.html', academics=academics_data)
 
     @app.route('/skills/')
     def skills():
@@ -60,7 +61,7 @@ def register_routes(app):
 
     @app.route('/sitemap.xml')
     def sitemap():
-        pages = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/', '/privacy/']
+        pages = ['/', '/about/', '/experience/', '/academics/', '/skills/', '/projects/', '/contact/', '/privacy/']
         site_url = app.config.get('SITE_URL', '')
         xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

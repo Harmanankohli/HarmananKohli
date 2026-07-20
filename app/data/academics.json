@@ -1,0 +1,81 @@
+{
+  "research_interests": [
+    "LLM Systems",
+    "Retrieval-Augmented Generation",
+    "Agentic Workflows",
+    "Explainable AI",
+    "AI Security",
+    "Multimodal AI",
+    "Natural Language Processing"
+  ],
+  "education": [
+    {
+      "institution": "Birla Institute of Technology and Science (BITS), Pilani",
+      "program": "WILP (Work Integrated Learning Programme)",
+      "degree": "M.Tech in Data Science and Engineering",
+      "cgpa": "8.14/10",
+      "period": "Apr 2022 – May 2024",
+      "logo": "bits",
+      "coursework": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Data Mining",
+        "Data Structures and Algorithms"
+      ],
+      "dissertation": {
+        "title": "Explainable AI for Predicting Malware Infection",
+        "period": "Nov 2023 – Apr 2024",
+        "summary": "Developed an interpretable ML pipeline on the Microsoft Malware dataset (8.9M devices) with GDPR-compatible explainability for cybersecurity applications.",
+        "bullets": [
+          "Trained ML model achieving ~66.7% accuracy and ~66.4% recall, aiding proactive mitigation of data breaches and financial risks.",
+          "Applied EBM, SHAP, LIME for interpretability, producing local + global explanations with uncertainty for regulatory + trust alignment (GDPR-compatible design).",
+          "Engineered features from 4.1GB (83-field) dataset, optimizing memory usage by ~50% via columnar transformations in Pandas/Polars."
+        ],
+        "tech": ["EBM", "SHAP", "LIME", "Polars", "Pandas", "scikit-learn", "XGBoost"]
+      }
+    },
+    {
+      "institution": "SRM University, Haryana",
+      "program": null,
+      "degree": "B.Tech in Computer Science and Engineering",
+      "cgpa": "8.14/10",
+      "period": "Jul 2014 – May 2018",
+      "logo": "srm",
+      "coursework": [
+        "Database Management Systems",
+        "Software Engineering",
+        "AI and Expert Systems",
+        "Data Mining",
+        "Data Structures and Algorithms"
+      ],
+      "dissertation": null
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Azure AI Engineer Associate",
+      "issuer": "Microsoft",
+      "date": "June 2025",
+      "icon": "cert"
+    },
+    {
+      "title": "Acknowledged Contributor — The Hundred-Page Language Models Book",
+      "issuer": "Andriy Burkov",
+      "date": "2025",
+      "icon": "book"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Team Award (2x), On-the-Spot Award (5x), Special Initiative Award",
+      "issuer": "Tata Consultancy Services",
+      "date": "2021 – 2023"
+    },
+    {
+      "title": "Semi-Finalist — TechGig Code Gladiators",
+      "issuer": "TechGig",
+      "date": "2018"
+    }
+  ]
+}

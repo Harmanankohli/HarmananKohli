@@ -698,37 +698,259 @@ button {
   margin-top: var(--space-md);
 }
 
-/* Education */
-.education__card {
+/* Academics — Research Interests */
+.acad-interests {
   padding: var(--space-xl);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.acad-interests__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+.acad-interests__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.acad-interest-tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-xl);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Academics — Education Cards */
+.acad-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.education__institution {
-  font-weight: 700;
-  font-size: 1.15rem;
+.acad-card:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
 }
 
-.education__degree {
+.acad-card__header {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.acad-card__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-alt);
   color: var(--color-primary);
-  font-weight: 600;
-  margin-top: var(--space-xs);
+  border: 1px solid var(--color-border);
 }
 
-.education__meta {
-  color: var(--color-text-muted);
+.acad-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.acad-card__institution {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.acad-card__program {
   font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.acad-card__degree {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 1rem;
   margin-top: var(--space-xs);
 }
 
-.education__courses {
+.acad-card__meta {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.acad-card__cgpa,
+.acad-card__period {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.acad-card__cgpa {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.acad-card__section {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.acad-card__section-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.acad-card__courses {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
+}
+
+/* Academics — Dissertation */
+.acad-card__dissertation {
+  background: var(--color-bg-alt);
+  margin-left: calc(-1 * var(--space-xl));
+  margin-right: calc(-1 * var(--space-xl));
+  margin-bottom: calc(-1 * var(--space-xl));
+  padding: var(--space-xl);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  border-top: 2px solid var(--color-secondary);
+}
+
+.acad-card__diss-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+.acad-card__diss-period {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.acad-card__diss-summary {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
   margin-top: var(--space-sm);
+}
+
+.acad-card__diss-bullets {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-md);
+}
+
+.acad-card__diss-bullets li {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-lg);
+  position: relative;
+}
+
+.acad-card__diss-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.acad-card__diss-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+/* Academics — Certifications & Awards */
+.acad-certs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.acad-cert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.acad-cert:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.acad-cert__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: #dbeafe;
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .acad-cert__icon {
+  background: #1e3a5f;
+}
+
+.acad-cert__icon--award {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+[data-theme="dark"] .acad-cert__icon--award {
+  background: #451a03;
+  color: #fbbf24;
+}
+
+.acad-cert__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.acad-cert__meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
 }
 
 /* Skills */

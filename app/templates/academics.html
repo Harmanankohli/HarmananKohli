@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Academics — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Academic background of Harmanan Kohli — M.Tech in Data Science from BITS Pilani, B.Tech in CSE from SRM University, XAI research, Azure AI certified.">
+<meta name="keywords" content="Harmanan Kohli academics, BITS Pilani, SRM University, M.Tech Data Science, B.Tech Computer Science, Explainable AI, Azure AI Engineer, research">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Academics</h1>
+        <p class="section__subtitle animate-on-scroll">Education, research, certifications, and recognition</p>
+
+        <div class="acad-interests animate-on-scroll">
+            <h2 class="acad-interests__title">Research Interests</h2>
+            <div class="acad-interests__tags">
+                {% for interest in academics.research_interests %}
+                <span class="acad-interest-tag">{{ interest }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% for edu in academics.education %}
+        <div class="acad-card animate-on-scroll">
+            <div class="acad-card__header">
+                <div class="acad-card__icon acad-card__icon--{{ edu.logo }}">
+                    {% if edu.logo == 'bits' %}
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
+                    {% else %}
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
+                    {% endif %}
+                </div>
+                <div class="acad-card__info">
+                    <h2 class="acad-card__institution">{{ edu.institution }}</h2>
+                    {% if edu.program %}
+                    <p class="acad-card__program">{{ edu.program }}</p>
+                    {% endif %}
+                    <p class="acad-card__degree">{{ edu.degree }}</p>
+                    <div class="acad-card__meta">
+                        <span class="acad-card__cgpa">CGPA: {{ edu.cgpa }}</span>
+                        <span class="acad-card__period">{{ edu.period }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acad-card__section">
+                <h3 class="acad-card__section-title">Relevant Coursework</h3>
+                <div class="acad-card__courses">
+                    {% for course in edu.coursework %}
+                    <span class="tag">{{ course }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% if edu.dissertation %}
+            <div class="acad-card__section acad-card__dissertation">
+                <h3 class="acad-card__section-title">Dissertation</h3>
+                <p class="acad-card__diss-title">{{ edu.dissertation.title }}</p>
+                <p class="acad-card__diss-period">{{ edu.dissertation.period }}</p>
+                <p class="acad-card__diss-summary">{{ edu.dissertation.summary }}</p>
+                <ul class="acad-card__diss-bullets">
+                    {% for bullet in edu.dissertation.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="acad-card__diss-tech">
+                    {% for tech in edu.dissertation.tech %}
+                    <span class="tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Certifications</h2>
+
+        <div class="acad-certs">
+            {% for cert in academics.certifications %}
+            <div class="acad-cert animate-on-scroll">
+                <div class="acad-cert__icon">
+                    {% if cert.icon == 'cert' %}
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+                    {% else %}
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                    {% endif %}
+                </div>
+                <div class="acad-cert__info">
+                    <p class="acad-cert__title">{{ cert.title }}</p>
+                    <p class="acad-cert__meta">{{ cert.issuer }} &middot; {{ cert.date }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Awards & Recognition</h2>
+
+        <div class="acad-certs">
+            {% for award in academics.awards %}
+            <div class="acad-cert animate-on-scroll">
+                <div class="acad-cert__icon acad-cert__icon--award">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </div>
+                <div class="acad-cert__info">
+                    <p class="acad-cert__title">{{ award.title }}</p>
+                    <p class="acad-cert__meta">{{ award.issuer }} &middot; {{ award.date }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
