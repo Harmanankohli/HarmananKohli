@@ -1152,6 +1152,7 @@ button {
 .contact__channel-value {
   font-weight: 600;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .contact__channel-info {
@@ -1380,12 +1381,19 @@ button {
 .contact__visa-note {
   margin-top: var(--space-sm);
   font-size: 0.82rem;
-  color: var(--color-primary);
+  color: #1d4ed8;
   font-weight: 600;
   padding: var(--space-xs) var(--space-sm);
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: var(--radius-sm);
   display: inline-block;
+}
+
+[data-theme="dark"] .contact__visa-note {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
 /* Cookie Banner */
