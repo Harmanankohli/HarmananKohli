@@ -63,9 +63,9 @@
     </div>
 </section>
 {% endblock %}
-{% block scripts %}
+{% block body_scripts %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
     var workBtn = document.querySelector('[data-view="work"]');
     var researchBtn = document.querySelector('[data-view="research"]');
     var workTimeline = document.getElementById('timeline-work');
@@ -86,6 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
         workTimeline.style.display = 'none';
         researchTimeline.style.display = '';
     });
-});
+})();
 </script>
 {% endblock %}
