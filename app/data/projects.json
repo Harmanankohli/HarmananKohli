@@ -63,6 +63,47 @@
     "link": null
   },
   {
+    "id": "sentiment-detection",
+    "title": "Sentiment Analysis & Detection",
+    "description": "NLP pipeline classifying IMDb movie reviews as positive/negative using Bag of Words and TF-IDF feature extraction",
+    "highlights": "89.9% accuracy with Logistic Regression and Naive Bayes",
+    "tech": ["NLP", "NLTK", "TF-IDF", "Logistic Regression", "scikit-learn"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/Sentiment-detection"
+  },
+  {
+    "id": "fashion-mnist-deep-learning",
+    "title": "Fashion MNIST Classification",
+    "description": "Deep neural network classifying clothing images into 10 categories on the Fashion MNIST dataset",
+    "tech": ["TensorFlow", "Keras", "Deep Learning"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/Projects/blob/main/Deep%20Learning%20using%20Fashion%20MNIST.ipynb"
+  },
+  {
+    "id": "lending-club-loan-analysis",
+    "title": "Lending Club Loan Prediction",
+    "description": "Neural network model to predict loan repayment status using Lending Club data",
+    "tech": ["TensorFlow", "Keras", "Pandas", "EDA"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/Projects/blob/main/Lending%20Club%20Loan%20Data%20Analysis.ipynb"
+  },
+  {
+    "id": "mercedes-benz-manufacturing",
+    "title": "Mercedes-Benz Greener Manufacturing",
+    "description": "Regression model with PCA dimensionality reduction to optimize manufacturing test bench speed",
+    "tech": ["XGBoost", "PCA", "scikit-learn", "Pandas"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/Projects/blob/main/Mercedes-Benz%20Greener%20Manufacturing.ipynb"
+  },
+  {
+    "id": "movielens-case-study",
+    "title": "MovieLens Rating Prediction",
+    "description": "Movie rating prediction using logistic regression, decision trees, and random forests on the MovieLens dataset",
+    "tech": ["Logistic Regression", "Random Forest", "Decision Trees", "scikit-learn"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/Projects/blob/main/Movielens%20Case%20Study%20.ipynb"
+  },
+  {
     "id": "scikit-learn-contributions",
     "title": "Scikit-learn Open-Source Contributions",
     "description": "Added documentation examples for f_regression() and silhouette_score()",
