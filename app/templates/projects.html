@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Projects — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Projects by Harmanan Kohli — Financial Document Intelligence, Multimodal Price Discovery Agent, XAI for Malware Prediction, and more.">
+<meta name="keywords" content="Harmanan Kohli projects, RAG, LangChain, Gemini Pro Vision, XAI, scikit-learn">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Projects</h1>
+        <p class="section__subtitle animate-on-scroll">Enterprise, research, and open-source work</p>
+
+        <div class="projects__filters animate-on-scroll">
+            <button class="btn btn--primary btn--sm" data-filter="all">All</button>
+            <button class="btn btn--secondary btn--sm" data-filter="Enterprise">Enterprise</button>
+            <button class="btn btn--secondary btn--sm" data-filter="Research">Research</button>
+            <button class="btn btn--secondary btn--sm" data-filter="Open-source">Open-Source</button>
+        </div>
+
+        <div class="projects__grid">
+            {% for project in projects %}
+            <article class="project-card animate-on-scroll" data-project-type="{{ project.type }}">
+                <span class="project-card__badge project-card__badge--{{ project.type | lower }}">{{ project.type }}</span>
+                <h3 class="project-card__title">{{ project.title }}</h3>
+                {% if project.company %}
+                <p class="project-card__company">{{ project.company }}</p>
+                {% endif %}
+                <p class="project-card__description">{{ project.description }}</p>
+                {% if project.highlights %}
+                <p class="project-card__description" style="font-size: 0.85rem; color: var(--color-primary);">
+                    {{ project.highlights }}
+                </p>
+                {% endif %}
+                <div class="project-card__tech">
+                    {% for tech in project.tech %}
+                    <span class="tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <div class="project-card__links">
+                    {% if project.link %}
+                    <a href="{{ project.link }}" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">View Project</a>
+                    {% endif %}
+                    {% if project.links %}
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" class="btn btn--secondary btn--sm" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Privacy Policy — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Privacy policy for Harmanan Kohli's portfolio website. Information about data collection, cookies, and GDPR compliance.">
+<meta name="robots" content="index, follow">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container" style="max-width: 800px;">
+        <h1 class="section__title animate-on-scroll">Privacy Policy</h1>
+        <div class="animate-on-scroll" style="line-height: 1.8; color: var(--color-text-muted);">
+            <p><strong>Last updated:</strong> July 2026</p>
+
+            <h2 style="color: var(--color-text); margin-top: var(--space-xl);">Data Collection</h2>
+            <p>This portfolio website collects minimal data:</p>
+            <ul style="list-style: disc; padding-left: var(--space-lg); margin-top: var(--space-sm);">
+                <li><strong>Contact form submissions:</strong> Name, email, and message are sent via Formspree and stored temporarily for response purposes.</li>
+                <li><strong>No tracking cookies</strong> are set by default. Any analytics would only load after explicit consent.</li>
+            </ul>
+
+            <h2 style="color: var(--color-text); margin-top: var(--space-xl);">Cookies</h2>
+            <p>This site uses a localStorage flag to remember your cookie consent preference. No third-party cookies are used unless you explicitly accept analytics cookies.</p>
+
+            <h2 style="color: var(--color-text); margin-top: var(--space-xl);">Your Rights (GDPR)</h2>
+            <p>If you are in the EU, you have the right to:</p>
+            <ul style="list-style: disc; padding-left: var(--space-lg); margin-top: var(--space-sm);">
+                <li>Request access to any data I hold about you</li>
+                <li>Request deletion of your data (right to erasure)</li>
+                <li>Withdraw consent at any time</li>
+            </ul>
+
+            <h2 style="color: var(--color-text); margin-top: var(--space-xl);">Data Processor</h2>
+            <p>Contact form submissions are processed by <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>. Please refer to their privacy policy for details on data handling.</p>
+
+            <h2 style="color: var(--color-text); margin-top: var(--space-xl);">Contact</h2>
+            <p>For privacy-related inquiries, email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

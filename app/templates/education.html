@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Education — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Education, certifications, and open-source contributions of Harmanan Kohli — M.Tech BITS Pilani, B.Tech SRM University.">
+<meta name="keywords" content="Harmanan Kohli education, BITS Pilani, SRM University, Azure AI Engineer, scikit-learn contributor">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Education</h1>
+
+        <div class="education__card animate-on-scroll">
+            <h2 class="education__institution">BITS Pilani (WILP)</h2>
+            <p class="education__degree">M.Tech in Data Science & Engineering</p>
+            <p class="education__meta">CGPA: 8.14/10 | Apr 2022 – May 2024</p>
+            <div class="education__courses">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Data Mining</span>
+                <span class="tag">DSA</span>
+            </div>
+        </div>
+
+        <div class="education__card animate-on-scroll">
+            <h2 class="education__institution">SRM University, Haryana</h2>
+            <p class="education__degree">B.Tech in Computer Science & Engineering</p>
+            <p class="education__meta">CGPA: 8.14/10 | Jul 2014 – May 2018</p>
+            <div class="education__courses">
+                <span class="tag">DBMS</span>
+                <span class="tag">Software Engineering</span>
+                <span class="tag">AI & Expert Systems</span>
+                <span class="tag">Data Mining</span>
+                <span class="tag">DSA</span>
+            </div>
+        </div>
+
+        <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Certifications & Awards</h2>
+
+        <div class="animate-stagger">
+            <div class="education__card">
+                <p><strong>Microsoft Azure AI Engineer Associate</strong> — June 2025</p>
+            </div>
+            <div class="education__card">
+                <p><strong>Acknowledged Contributor</strong> — The Hundred-Page Language Models Book (2025)</p>
+            </div>
+            <div class="education__card">
+                <p><strong>TCS Awards:</strong> Best Team (2x), On-the-Spot (5x), Special Initiative Award (2021–2023)</p>
+            </div>
+            <div class="education__card">
+                <p><strong>Semi-Finalist</strong> — TechGig Code Gladiators (2018)</p>
+            </div>
+        </div>
+
+        <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Open-Source Contributions</h2>
+
+        <div class="animate-stagger">
+            <div class="education__card">
+                <p><strong>scikit-learn:</strong> Added documentation examples for <code>f_regression()</code></p>
+                <a href="https://github.com/scikit-learn/scikit-learn/pull/28104" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" style="margin-top: var(--space-sm)">View PR #28104</a>
+            </div>
+            <div class="education__card">
+                <p><strong>scikit-learn:</strong> Added documentation examples for <code>silhouette_score()</code></p>
+                <a href="https://github.com/scikit-learn/scikit-learn/pull/28125" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" style="margin-top: var(--space-sm)">View PR #28125</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

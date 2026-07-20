@@ -1,0 +1,76 @@
+[
+  {
+    "id": "financial-document-intelligence",
+    "title": "Financial Document Intelligence System",
+    "company": "Capgemini",
+    "description": "RAG-based intelligence system for Master Facility Agreements and Sanction Letters",
+    "highlights": "2x2 VectorDB architecture, Text-to-SQL hybrid reasoning, agentic orchestration",
+    "tech": ["LangChain", "LangGraph", "Bedrock Agents", "AWS Lambda", "VectorDB", "Docling"],
+    "type": "Enterprise",
+    "link": null
+  },
+  {
+    "id": "ai-product-accelerator",
+    "title": "AI-Powered Product Accelerator",
+    "company": "Capgemini",
+    "description": "Multi-agent system for pricing intelligence, competitor benchmarking, and AI-generated marketing content",
+    "tech": ["Multi-agent architecture", "LLM", "Image analysis"],
+    "type": "Enterprise",
+    "link": null
+  },
+  {
+    "id": "multimodal-price-discovery",
+    "title": "Multimodal Price Discovery Agent",
+    "company": "Launchpad.ai / Fellowship.ai",
+    "description": "Agent using Gemini Pro Vision achieving 97% accuracy for price discovery across 100K+ SKUs",
+    "highlights": "Fallback logic (VectorDB → SerpAPI), 50% reduction in manual lookup",
+    "tech": ["Gemini Pro Vision", "RAG", "VectorDB", "Tool Calling", "SerpAPI", "Selenium"],
+    "type": "Research",
+    "link": null
+  },
+  {
+    "id": "xai-malware-prediction",
+    "title": "XAI for Malware Prediction",
+    "company": "Master's Dissertation",
+    "description": "ML model on Microsoft Malware dataset (8.9M devices) with GDPR-compatible explainability",
+    "highlights": "66.7% accuracy, 50% memory optimization, regulatory-aligned XAI",
+    "tech": ["EBM", "SHAP", "LIME", "Polars", "Pandas"],
+    "type": "Research",
+    "link": null
+  },
+  {
+    "id": "pdf-classification",
+    "title": "Automated PDF Classification App",
+    "description": "NLP & XGBoost-based Streamlit app to classify electrical product PDFs",
+    "tech": ["Streamlit", "Apache Tika", "NLP", "XGBoost"],
+    "type": "Open-source",
+    "link": "https://pdf-electrical-classification.streamlit.app/"
+  },
+  {
+    "id": "census-income-clustering",
+    "title": "Census Income Data Clustering",
+    "description": "K-Means + PCA for customer segmentation and targeted marketing",
+    "tech": ["K-Means", "PCA", "EDA"],
+    "type": "Open-source",
+    "link": "https://github.com/Harmanankohli/census-income-clustering"
+  },
+  {
+    "id": "lyrics-generation-lstm",
+    "title": "Lyrics Generation using LSTM",
+    "description": "LSTM-based RNN to generate song lyrics from seed text",
+    "tech": ["LSTM", "RNN", "Deep Learning", "Streamlit"],
+    "type": "Open-source",
+    "link": null
+  },
+  {
+    "id": "scikit-learn-contributions",
+    "title": "Scikit-learn Open-Source Contributions",
+    "description": "Added documentation examples for f_regression() and silhouette_score()",
+    "tech": ["scikit-learn", "Python"],
+    "type": "Open-source",
+    "links": [
+      {"label": "PR #28104", "url": "https://github.com/scikit-learn/scikit-learn/pull/28104"},
+      {"label": "PR #28125", "url": "https://github.com/scikit-learn/scikit-learn/pull/28125"}
+    ]
+  }
+]

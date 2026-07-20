@@ -1,0 +1,19 @@
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+        <a href="{{ url_for('index') }}" class="navbar__logo">{{ profile.name }}</a>
+        <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('experience') }}">Experience</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+            <span class="theme-toggle__icon">🌙</span>
+        </button>
+    </div>
+</nav>

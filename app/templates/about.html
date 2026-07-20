@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}About — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Learn about Harmanan Kohli — LLM/AI Engineer with 6+ years in tech, expertise in RAG, Agentic Workflows, XAI, and Cloud Deployment.">
+<meta name="keywords" content="Harmanan Kohli, AI Engineer, Data Scientist, Mumbai, BITS Pilani, LLM, RAG">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">About Me</h1>
+
+        <div class="about__summary animate-on-scroll">
+            <p>{{ profile.summary.professional }}</p>
+        </div>
+
+        <div class="about__summary animate-on-scroll">
+            <h2 class="section__subtitle">Research Interests</h2>
+            <p>{{ profile.summary.academic }}</p>
+        </div>
+
+        <div class="about__stats animate-stagger">
+            {% for stat in profile.stats %}
+            <div class="stat-card">
+                <div class="stat-card__value">{{ stat.value }}</div>
+                <div class="stat-card__label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="contact__availability animate-on-scroll" style="margin-bottom: var(--space-2xl)">
+            <p><strong>{{ profile.availability }}</strong></p>
+            <p style="color: var(--color-text-muted); margin-top: var(--space-sm)">Based in {{ profile.location }} ({{ profile.timezone }})</p>
+        </div>
+
+        <div class="animate-on-scroll">
+            <h2 class="section__subtitle">Download Resume</h2>
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                <a href="{{ profile.resume.professional }}" class="btn btn--primary" download>Professional Resume (PDF)</a>
+                <a href="{{ profile.resume.academic }}" class="btn btn--secondary" download>Academic CV (PDF)</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,78 @@
+{
+  "work": [
+    {
+      "id": "capgemini",
+      "role": "Consultant (GenAI)",
+      "company": "Capgemini",
+      "location": "Mumbai",
+      "period": "Aug 2025 – Present",
+      "type": "work",
+      "bullets": [
+        "Financial document intelligence system (MFA & Sanction Letters) with Docling + LangChain",
+        "2x2 VectorDB retrieval architecture for semantic isolation",
+        "LangGraph agentic orchestration for multi-step workflows",
+        "Text-to-SQL via Bedrock Agents for hybrid structured + unstructured reasoning",
+        "AWS Lambda + Bedrock deployment with latency/cost optimization",
+        "MCP server tools in Databricks for LLM-driven workflows",
+        "AI-powered accelerator for pricing intelligence, competitor benchmarking, product discovery"
+      ],
+      "tech": ["LangChain", "LangGraph", "Bedrock Agents", "AWS Lambda", "VectorDB", "Docling", "Databricks"]
+    },
+    {
+      "id": "sterlite",
+      "role": "Data Scientist",
+      "company": "Sterlite Technologies",
+      "location": "Mumbai",
+      "period": "Oct 2024 – Apr 2025",
+      "type": "work",
+      "bullets": [
+        "Safety stock optimization model (Z-score, AMC, lead time, SD)",
+        "Counterfactual Explanations (XAI) for RFQ classifications",
+        "Gemini Pro Vision POC for vendor invoice extraction"
+      ],
+      "tech": ["XAI", "Gemini Pro Vision", "Python", "Statistical Modeling"]
+    },
+    {
+      "id": "tcs",
+      "role": "Systems Engineer",
+      "company": "Tata Consultancy Services",
+      "location": "Mumbai",
+      "period": "Jan 2020 – Jan 2024",
+      "type": "work",
+      "bullets": [
+        "SAP analytics and planning solutions",
+        "Data pipeline optimization (days to minutes) in SAP BPC",
+        "Geospatial analytics across SAP S4HANA, GIS, Real Estate"
+      ],
+      "tech": ["SAP", "SAP BPC", "SAP S4HANA", "GIS"]
+    }
+  ],
+  "research": [
+    {
+      "id": "bits-dissertation",
+      "role": "Graduate Researcher (Master's Dissertation)",
+      "company": "BITS Pilani",
+      "period": "Nov 2023 – Apr 2024",
+      "type": "research",
+      "bullets": [
+        "Developed ML models on Microsoft Malware dataset (8.9M devices) with explainable AI techniques",
+        "Implemented EBM, SHAP, and LIME for GDPR-compatible model interpretability",
+        "Achieved 66.7% accuracy with 50% memory optimization via Polars-based preprocessing"
+      ],
+      "tech": ["EBM", "SHAP", "LIME", "Polars", "Pandas", "scikit-learn"]
+    },
+    {
+      "id": "launchpad",
+      "role": "Data Science Fellow",
+      "company": "Launchpad.ai (via Fellowship.ai)",
+      "period": "Jan 2024 – Mar 2024",
+      "type": "research",
+      "bullets": [
+        "Built multimodal price discovery agent using Gemini Pro Vision (97% accuracy across 100K+ SKUs)",
+        "Implemented fallback retrieval logic: VectorDB similarity search → SerpAPI live lookup",
+        "Reduced manual price lookup effort by 50% through automated agentic workflows"
+      ],
+      "tech": ["Gemini Pro Vision", "RAG", "VectorDB", "SerpAPI", "Selenium"]
+    }
+  ]
+}

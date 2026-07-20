@@ -1,0 +1,6 @@
+Flask>=3.0
+Frozen-Flask>=1.0
+python-dotenv
+Markdown>=3.0
+csscompressor
+jsmin

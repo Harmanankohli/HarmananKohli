@@ -1,0 +1,60 @@
+{
+  "name": "Harmanan Gurvinder Kohli",
+  "title": "LLM/AI Engineer | Data Scientist",
+  "tagline": "Building intelligent systems with LLMs, RAG, and Explainable AI",
+  "email": "hkohli40@gmail.com",
+  "location": "Mumbai, India",
+  "timezone": "IST / UTC+5:30",
+  "github": "https://github.com/Harmanankohli",
+  "linkedin": "https://linkedin.com/in/harmanankohli",
+  "summary": {
+    "professional": "LLM/AI Engineer with experience building agentic workflows, RAG systems, Text-to-SQL tools, embeddings pipelines, and multimodal LLM applications, deployed in cloud environments. Strong background across ML, NLP, Explainable AI, Deep Learning, and enterprise analytics.",
+    "academic": "Researcher in LLM Systems, RAG, Agentic Workflows, Explainable AI, AI Security, Multimodal AI, and NLP."
+  },
+  "open_to": ["Full-time roles", "Research collaborations", "Consulting", "Open-source contributions"],
+  "target_regions": ["US", "EU", "UAE", "India", "Australia"],
+  "availability": "Open to opportunities in US, EU, UAE, India, Australia",
+  "stats": [
+    {"value": "6+", "label": "Years in Tech"},
+    {"value": "8.9M", "label": "Device ML Model"},
+    {"value": "97%", "label": "Accuracy Multimodal Agent"},
+    {"value": "Contributor", "label": "Scikit-learn"}
+  ],
+  "current_role": {
+    "company": "Capgemini",
+    "title": "GenAI Consultant",
+    "location": "Mumbai",
+    "period": "Aug 2025 – Present"
+  },
+  "resume": {
+    "professional": "/files/Harmanan_Kohli_Professional.pdf",
+    "academic": "/files/Harmanan_Kohli_Academic.pdf"
+  },
+  "social": [
+    {"name": "GitHub", "url": "https://github.com/Harmanankohli", "icon": "github"},
+    {"name": "LinkedIn", "url": "https://linkedin.com/in/harmanankohli", "icon": "linkedin"},
+    {"name": "Email", "url": "mailto:hkohli40@gmail.com", "icon": "email"}
+  ],
+  "what_i_do": [
+    {
+      "title": "LLM & Agentic Systems",
+      "description": "LangChain, LangGraph, RAG, Bedrock Agents",
+      "icon": "brain"
+    },
+    {
+      "title": "Machine Learning & XAI",
+      "description": "scikit-learn, SHAP, LIME, EBM",
+      "icon": "chart"
+    },
+    {
+      "title": "Cloud & Deployment",
+      "description": "AWS, Azure, GCP",
+      "icon": "cloud"
+    },
+    {
+      "title": "Data Engineering & Analytics",
+      "description": "Pandas, Polars, SQL, SAP",
+      "icon": "database"
+    }
+  ]
+}

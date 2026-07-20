@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Experience — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Professional experience of Harmanan Kohli — GenAI Consultant at Capgemini, Data Scientist at Sterlite Technologies, Systems Engineer at TCS.">
+<meta name="keywords" content="Harmanan Kohli experience, Capgemini GenAI, Sterlite Technologies, TCS, career timeline">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Experience & Timeline</h1>
+        <p class="section__subtitle animate-on-scroll">My professional journey in tech and AI research</p>
+
+        <div class="view-toggle animate-on-scroll">
+            <button class="view-toggle__btn view-toggle__btn--active" data-view="work">Professional View</button>
+            <button class="view-toggle__btn" data-view="research">Academic/Research View</button>
+        </div>
+
+        <div id="timeline-work" class="timeline">
+            {% for item in timeline.work %}
+            <div class="timeline__item animate-on-scroll">
+                <div class="timeline__dot timeline__dot--work"></div>
+                <div class="timeline__header">
+                    <h3 class="timeline__role">{{ item.role }}</h3>
+                    <p class="timeline__company">{{ item.company }} — {{ item.location }}</p>
+                    <p class="timeline__meta">{{ item.period }}</p>
+                </div>
+                <ul class="timeline__bullets">
+                    {% for bullet in item.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="timeline__tech">
+                    {% for tech in item.tech %}
+                    <span class="tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div id="timeline-research" class="timeline" style="display: none;">
+            {% for item in timeline.research %}
+            <div class="timeline__item animate-on-scroll">
+                <div class="timeline__dot timeline__dot--research"></div>
+                <div class="timeline__header">
+                    <h3 class="timeline__role">{{ item.role }}</h3>
+                    <p class="timeline__company">{{ item.company }}</p>
+                    <p class="timeline__meta">{{ item.period }}</p>
+                </div>
+                <ul class="timeline__bullets">
+                    {% for bullet in item.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="timeline__tech">
+                    {% for tech in item.tech %}
+                    <span class="tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(function() {
+    const workBtn = document.querySelector('[data-view="work"]');
+    const researchBtn = document.querySelector('[data-view="research"]');
+    const workTimeline = document.getElementById('timeline-work');
+    const researchTimeline = document.getElementById('timeline-research');
+
+    function setActive(btn) {
+        document.querySelectorAll('.view-toggle__btn').forEach(b => b.classList.remove('view-toggle__btn--active'));
+        btn.classList.add('view-toggle__btn--active');
+    }
+
+    if (workBtn && researchBtn) {
+        workBtn.addEventListener('click', function() {
+            setActive(this);
+            workTimeline.style.display = '';
+            researchTimeline.style.display = 'none';
+        });
+        researchBtn.addEventListener('click', function() {
+            setActive(this);
+            workTimeline.style.display = 'none';
+            researchTimeline.style.display = '';
+        });
+    }
+})();
+</script>
+{% endblock %}

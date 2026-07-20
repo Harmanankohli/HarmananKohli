@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Contact — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Get in touch with Harmanan Kohli for job opportunities, research collaborations, consulting, or open-source contributions.">
+<meta name="keywords" content="contact Harmanan Kohli, hire AI Engineer, GenAI consultant Mumbai">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Get In Touch</h1>
+        <p class="section__subtitle animate-on-scroll">Open to opportunities across US, EU, UAE, India, and Australia</p>
+
+        <div class="contact__grid">
+            <div class="contact__info animate-on-scroll">
+                <div class="contact__item">
+                    <div class="contact__item-icon">📧</div>
+                    <div>
+                        <p class="contact__item-label">Email</p>
+                        <p class="contact__item-value"><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__item-icon">💼</div>
+                    <div>
+                        <p class="contact__item-label">LinkedIn</p>
+                        <p class="contact__item-value"><a href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/harmanankohli</a></p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__item-icon">🐙</div>
+                    <div>
+                        <p class="contact__item-label">GitHub</p>
+                        <p class="contact__item-value"><a href="{{ profile.github }}" target="_blank" rel="noopener noreferrer">github.com/Harmanankohli</a></p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <div class="contact__item-icon">📍</div>
+                    <div>
+                        <p class="contact__item-label">Location</p>
+                        <p class="contact__item-value">{{ profile.location }} ({{ profile.timezone }})</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/xqapvblp" method="POST" class="contact__form animate-on-scroll">
+                <div class="form__group">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" id="name" name="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" name="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="subject" class="form__label">Subject</label>
+                    <select id="subject" name="subject" class="form__select" required>
+                        <option value="">Select a topic</option>
+                        <option value="Job Opportunity">Job Opportunity</option>
+                        <option value="Collaboration">Collaboration</option>
+                        <option value="Research">Research</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="message" class="form__label">Message</label>
+                    <textarea id="message" name="message" class="form__textarea" required></textarea>
+                </div>
+                <div class="form__honeypot">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn--primary">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact__availability animate-on-scroll">
+            <p><strong>{{ profile.availability }}</strong></p>
+            <p style="color: var(--color-text-muted); margin-top: var(--space-sm)">
+                Based in {{ profile.location }} ({{ profile.timezone }}) &middot; 
+                Available for relocation to US, UAE, Australia &middot; 
+                Remote-friendly for EU/US timezone collaboration
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Harmanan Gurvinder Kohli">
+    <meta name="robots" content="index, follow">
+    <title>{% block title %}Harmanan Kohli | LLM/AI Engineer{% endblock %}</title>
+    {% block meta %}{% endblock %}
+
+    <meta property="og:image" content="{{ site_url }}/static/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="{{ site_url }}{{ request.path }}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site_url }}/sitemap.xml">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Harmanan Gurvinder Kohli",
+      "jobTitle": "LLM/AI Engineer",
+      "url": "{{ site_url }}",
+      "sameAs": [
+        "https://github.com/Harmanankohli",
+        "https://linkedin.com/in/harmanankohli"
+      ],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "BITS Pilani"},
+        {"@type": "CollegeOrUniversity", "name": "SRM University"}
+      ],
+      "knowsAbout": ["LLM Systems", "RAG", "Agentic Workflows", "Explainable AI", "Machine Learning"]
+    }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+    {% block styles %}{% endblock %}
+
+    <script defer src="{{ url_for('static', filename='js/theme_toggle.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/scroll_animations.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</head>
+<body>
+    {% include 'components/navbar.html' %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% include 'components/footer.html' %}
+    {% include 'components/cookie_banner.html' %}
+</body>
+</html>

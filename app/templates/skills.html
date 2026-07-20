@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Skills — Harmanan Kohli{% endblock %}
+{% block meta %}
+<meta name="description" content="Technical skills of Harmanan Kohli — Python, SQL, LangChain, LangGraph, AWS, Azure, GCP, scikit-learn, TensorFlow, and more.">
+<meta name="keywords" content="Harmanan Kohli skills, LLM, RAG, LangChain, AWS, Python, Machine Learning, AI">
+{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h1 class="section__title animate-on-scroll">Skills & Tools</h1>
+        <p class="section__subtitle animate-on-scroll">Technologies I work with daily</p>
+
+        {% set skill_categories = [
+            {
+                "title": "Programming",
+                "class": "programming",
+                "skills": ["Python", "SQL"]
+            },
+            {
+                "title": "GenAI & LLM Systems",
+                "class": "genai",
+                "skills": ["LangChain", "LangGraph", "Bedrock Agents", "VectorDB", "Embeddings", "RAG", "Tool Calling", "Prompting", "Docling", "OCR"]
+            },
+            {
+                "title": "ML & Deep Learning",
+                "class": "ml",
+                "skills": ["scikit-learn", "TensorFlow", "Keras", "XGBoost", "Pandas", "Polars", "NumPy", "SHAP/LIME", "EBM"]
+            },
+            {
+                "title": "Cloud & Deployment",
+                "class": "cloud",
+                "skills": ["AWS (Lambda, Bedrock, DynamoDB, CloudWatch)", "Azure", "GCP (Cloud Run)", "Streamlit"]
+            },
+            {
+                "title": "Analytics & Tools",
+                "class": "analytics",
+                "skills": ["Tableau", "Selenium", "SAP", "Excel"]
+            }
+        ] %}
+
+        {% for category in skill_categories %}
+        <div class="skills__category animate-on-scroll">
+            <h2 class="skills__category-title">{{ category.title }}</h2>
+            <div class="skills__badges animate-stagger">
+                {% for skill in category.skills %}
+                <span class="skill-badge skill-badge--{{ category.class }}">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
