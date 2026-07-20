@@ -43,7 +43,7 @@
     "title": "Automated PDF Classification App",
     "description": "NLP & XGBoost-based Streamlit app to classify electrical product PDFs",
     "tech": ["Streamlit", "Apache Tika", "NLP", "XGBoost"],
-    "type": "Open-source",
+    "type": "Personal",
     "link": "https://pdf-electrical-classification.streamlit.app/"
   },
   {
@@ -51,7 +51,7 @@
     "title": "Census Income Data Clustering",
     "description": "K-Means + PCA for customer segmentation and targeted marketing",
     "tech": ["K-Means", "PCA", "EDA"],
-    "type": "Open-source",
+    "type": "Personal",
     "link": "https://github.com/Harmanankohli/census-income-clustering"
   },
   {
@@ -59,7 +59,7 @@
     "title": "Lyrics Generation using LSTM",
     "description": "LSTM-based RNN to generate song lyrics from seed text",
     "tech": ["LSTM", "RNN", "Deep Learning", "Streamlit"],
-    "type": "Open-source",
+    "type": "Personal",
     "link": "https://lyrics-generation-using-lstm.streamlit.app/"
   },
   {
