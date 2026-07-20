@@ -1179,10 +1179,16 @@ button {
 }
 
 .contact__message-section {
-  background: var(--color-bg-card);
+  background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
+}
+
+.contact__message-section .form__input,
+.contact__message-section .form__select,
+.contact__message-section .form__textarea {
+  background: var(--color-bg-card);
 }
 
 .contact__form {
@@ -1369,6 +1375,17 @@ button {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   font-style: italic;
+}
+
+.contact__visa-note {
+  margin-top: var(--space-sm);
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(37, 99, 235, 0.08);
+  border-radius: var(--radius-sm);
+  display: inline-block;
 }
 
 /* Cookie Banner */
