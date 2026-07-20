@@ -60,7 +60,7 @@
     "description": "LSTM-based RNN to generate song lyrics from seed text",
     "tech": ["LSTM", "RNN", "Deep Learning", "Streamlit"],
     "type": "Open-source",
-    "link": null
+    "link": "https://lyrics-generation-using-lstm.streamlit.app/"
   },
   {
     "id": "sentiment-detection",
