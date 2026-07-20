@@ -10,6 +10,15 @@
   .contact__channels {
     grid-template-columns: 1fr;
   }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__journey-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
 }
 
 @media (min-width: 768px) {
@@ -86,8 +95,16 @@
     grid-template-columns: 1fr;
   }
 
+  .about__intro {
+    grid-template-columns: 1fr;
+  }
+
   .about__stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about__journey-item {
+    grid-template-columns: 120px 1fr;
   }
 
   .exp-highlights {

@@ -9,34 +9,113 @@
     <div class="container">
         <h1 class="section__title animate-on-scroll">About Me</h1>
 
-        <div class="about__summary animate-on-scroll">
-            <p>{{ profile.summary.professional }}</p>
-        </div>
-
-        <div class="about__summary animate-on-scroll">
-            <h2 class="section__subtitle">Research Interests</h2>
-            <p>{{ profile.summary.academic }}</p>
-        </div>
-
-        <div class="about__stats animate-stagger">
-            {% for stat in profile.stats %}
-            <div class="stat-card">
-                <div class="stat-card__value">{{ stat.value }}</div>
-                <div class="stat-card__label">{{ stat.label }}</div>
+        <div class="about__intro animate-on-scroll">
+            <div class="about__intro-text">
+                <p class="about__lead">{{ profile.summary.professional }}</p>
+                <p class="about__current">
+                    Currently working as <strong>{{ profile.current_role.title }}</strong> at
+                    <strong>{{ profile.current_role.company }}</strong>, {{ profile.current_role.location }}.
+                </p>
             </div>
-            {% endfor %}
+            <div class="about__stats">
+                {% for stat in profile.stats %}
+                <div class="stat-card">
+                    <div class="stat-card__value">{{ stat.value }}</div>
+                    <div class="stat-card__label">{{ stat.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
 
-        <div class="contact__availability animate-on-scroll" style="margin-bottom: var(--space-2xl)">
-            <p><strong>{{ profile.availability }}</strong></p>
-            <p style="color: var(--color-text-muted); margin-top: var(--space-sm)">Based in {{ profile.location }} ({{ profile.timezone }})</p>
+        <div class="about__what-i-do animate-on-scroll">
+            <h2 class="section__subtitle">What I Do</h2>
+            <div class="what-i-do">
+                {% for item in profile.what_i_do %}
+                <div class="what-i-do__card">
+                    <div class="what-i-do__icon">
+                        {% if item.icon == 'brain' %}
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/><path d="M9 21h6"/><path d="M10 17v4"/><path d="M14 17v4"/></svg>
+                        {% elif item.icon == 'chart' %}
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21H3V3"/><path d="M18 9l-5 5-4-4-3 3"/></svg>
+                        {% elif item.icon == 'cloud' %}
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+                        {% elif item.icon == 'database' %}
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        {% endif %}
+                    </div>
+                    <h3 class="what-i-do__title">{{ item.title }}</h3>
+                    <p class="what-i-do__desc">{{ item.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
         </div>
 
-        <div class="animate-on-scroll">
+        <div class="about__journey animate-on-scroll">
+            <h2 class="section__subtitle">Journey So Far</h2>
+            <div class="about__journey-grid">
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2025 – Present</div>
+                    <div class="about__journey-detail">
+                        <strong>GenAI Consultant</strong> at Capgemini — building agentic workflows, RAG systems, and Text-to-SQL tools on AWS
+                    </div>
+                </div>
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2024 – 2025</div>
+                    <div class="about__journey-detail">
+                        <strong>Data Scientist</strong> at Sterlite Technologies — safety stock optimization, XAI for RFQ classification, Gemini Pro Vision for invoice extraction
+                    </div>
+                </div>
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2024</div>
+                    <div class="about__journey-detail">
+                        <strong>Data Science Fellow</strong> at Launchpad.ai — multimodal price discovery agent with 97% accuracy, scalable RAG + VectorDB pipeline
+                    </div>
+                </div>
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2022 – 2024</div>
+                    <div class="about__journey-detail">
+                        <strong>M.Tech</strong> at BITS Pilani — Data Science &amp; Engineering (CGPA 8.14/10), dissertation on Explainable AI for malware prediction
+                    </div>
+                </div>
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2020 – 2024</div>
+                    <div class="about__journey-detail">
+                        <strong>Systems Engineer</strong> at TCS — SAP analytics, data pipeline optimization, geospatial analysis across S4HANA
+                    </div>
+                </div>
+                <div class="about__journey-item">
+                    <div class="about__journey-year">2014 – 2018</div>
+                    <div class="about__journey-detail">
+                        <strong>B.Tech</strong> at SRM University — Computer Science &amp; Engineering (CGPA 8.14/10)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about__research animate-on-scroll">
+            <h2 class="section__subtitle">Research Interests</h2>
+            <div class="about__research-tags">
+                <span class="tag tag--lg">LLM Systems</span>
+                <span class="tag tag--lg">Retrieval-Augmented Generation</span>
+                <span class="tag tag--lg">Agentic Workflows</span>
+                <span class="tag tag--lg">Explainable AI</span>
+                <span class="tag tag--lg">AI Security</span>
+                <span class="tag tag--lg">Multimodal AI</span>
+                <span class="tag tag--lg">Natural Language Processing</span>
+            </div>
+        </div>
+
+        <div class="about__resume animate-on-scroll">
             <h2 class="section__subtitle">Download Resume</h2>
-            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Professional.pdf') }}" class="btn btn--primary" download>Professional Resume (PDF)</a>
-                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Academic.pdf') }}" class="btn btn--secondary" download>Academic CV (PDF)</a>
+            <div class="about__resume-links">
+                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Professional.pdf') }}" class="btn btn--primary" download>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Professional Resume
+                </a>
+                <a href="{{ url_for('static', filename='files/Harmanan_Kohli_Academic.pdf') }}" class="btn btn--secondary" download>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Academic CV
+                </a>
             </div>
         </div>
     </div>

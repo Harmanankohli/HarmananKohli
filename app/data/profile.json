@@ -16,9 +16,9 @@
   "availability": "Open to opportunities in US, EU, UAE, India, Australia, Singapore, Canada",
   "stats": [
     {"value": "6+", "label": "Years in Tech"},
-    {"value": "8.9M", "label": "Device ML Model"},
-    {"value": "97%", "label": "Accuracy Multimodal Agent"},
-    {"value": "Contributor", "label": "Scikit-learn"}
+    {"value": "3", "label": "Companies"},
+    {"value": "M.Tech", "label": "BITS Pilani"},
+    {"value": "Azure AI", "label": "Certified"}
   ],
   "current_role": {
     "company": "Capgemini",

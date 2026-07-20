@@ -432,24 +432,39 @@ button {
   margin-bottom: var(--space-sm);
 }
 
-.what-i-do__description {
+.what-i-do__desc {
   color: var(--color-text-muted);
   font-size: 0.9rem;
 }
 
 /* About Page */
-.about__summary {
+.about__intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+  margin-bottom: var(--space-2xl);
+}
+
+.about__lead {
   font-size: 1.1rem;
   line-height: 1.8;
-  max-width: 800px;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.about__current {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  padding: var(--space-md);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-bg-alt);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
 
 .about__stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
 }
 
 .stat-card {
@@ -461,15 +476,93 @@ button {
 }
 
 .stat-card__value {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--color-primary);
 }
 
 .stat-card__label {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-top: var(--space-xs);
+}
+
+.about__what-i-do {
+  margin-bottom: var(--space-2xl);
+}
+
+.about__journey {
+  margin-bottom: var(--space-2xl);
+}
+
+.about__journey-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about__journey-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__journey-item:last-child {
+  border-bottom: none;
+}
+
+.about__journey-year {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.about__journey-detail {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.about__journey-detail strong {
+  color: var(--color-text);
+}
+
+.about__research {
+  margin-bottom: var(--space-2xl);
+}
+
+.about__research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.tag--lg {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+}
+
+.about__resume {
+  margin-bottom: var(--space-xl);
+}
+
+.about__resume-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.about__resume-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.about__resume-links .btn svg {
+  flex-shrink: 0;
 }
 
 /* Experience Highlights */
