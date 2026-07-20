@@ -1,7 +1,6 @@
 import json
 import os
-import os
-from flask import render_template, send_from_directory, Response
+from flask import render_template, Response
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 
