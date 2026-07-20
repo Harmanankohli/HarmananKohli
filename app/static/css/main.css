@@ -1131,10 +1131,12 @@ button {
 .project-card__badge--enterprise { background: #dbeafe; color: #1d4ed8; }
 .project-card__badge--research { background: #f3e8ff; color: #7c3aed; }
 .project-card__badge--open-source { background: #d1fae5; color: #047857; }
+.project-card__badge--personal { background: #fef3c7; color: #92400e; }
 
 [data-theme="dark"] .project-card__badge--enterprise { background: #1e3a5f; color: #93c5fd; }
 [data-theme="dark"] .project-card__badge--research { background: #3b1f6e; color: #c4b5fd; }
 [data-theme="dark"] .project-card__badge--open-source { background: #064e3b; color: #6ee7b7; }
+[data-theme="dark"] .project-card__badge--personal { background: #78350f; color: #fcd34d; }
 
 .project-card__title {
   font-weight: 700;
