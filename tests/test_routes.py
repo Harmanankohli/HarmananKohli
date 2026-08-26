@@ -27,6 +27,10 @@ def test_experience_page(client):
     rv = client.get('/experience/')
     assert rv.status_code == 200
 
+def test_academics_page(client):
+    rv = client.get('/academics/')
+    assert rv.status_code == 200
+
 def test_education_page(client):
     rv = client.get('/education/')
     assert rv.status_code == 200
@@ -58,7 +62,7 @@ def test_sitemap_xml(client):
     assert b'<urlset' in rv.data
 
 def test_all_pages_have_meta(client):
-    pages = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/']
+    pages = ['/', '/about/', '/experience/', '/academics/', '/education/', '/skills/', '/projects/', '/contact/']
     for page in pages:
         rv = client.get(page)
         assert rv.status_code == 200

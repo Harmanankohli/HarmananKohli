@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Harmanan Kohli - LLM/AI Engineer</title>
+  <desc id="desc">Social preview image for Harmanan Kohli's portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#164e63"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+  <text x="112" y="190" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="800">Harmanan Kohli</text>
+  <text x="116" y="270" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">LLM/AI Engineer • Data Scientist</text>
+  <text x="116" y="354" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="31">Agentic AI • RAG • MCP • Explainable AI</text>
+  <text x="116" y="430" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="26">Building reliable AI systems with retrieval, evaluation, and responsible AI practices.</text>
+  <text x="116" y="505" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">harmanan.is-a.dev</text>
+</svg>

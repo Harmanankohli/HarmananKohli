@@ -1,0 +1,165 @@
+/* Mobile First — base styles are mobile by default */
+
+@media (min-width: 480px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
+@media (max-width: 479px) {
+  .contact__channels {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__journey-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__name {
+    font-size: 3rem;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  .navbar__links {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--color-nav-bg);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__links li {
+    padding: var(--space-sm) 0;
+  }
+
+  .hero__name {
+    font-size: 2.2rem;
+  }
+
+  .hero__tagline {
+    font-size: 1rem;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__channels {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .what-i-do {
+    grid-template-columns: 1fr;
+  }
+
+  .about__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about__journey-item {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .exp-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle__btn {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-sm) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .timeline__header {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .timeline__period {
+    white-space: normal;
+  }
+
+  .acad-card__header {
+    flex-direction: column;
+  }
+
+  .acad-card__meta {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .acad-card__dissertation {
+    margin-left: calc(-1 * var(--space-lg));
+    margin-right: calc(-1 * var(--space-lg));
+    margin-bottom: calc(-1 * var(--space-lg));
+    padding: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__name {
+    font-size: 4rem;
+  }
+
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+}

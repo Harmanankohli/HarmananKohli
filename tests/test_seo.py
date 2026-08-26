@@ -23,7 +23,7 @@ def fetch_soup(client, path):
 
 def test_unique_titles(client):
     titles = {}
-    pages = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/', '/privacy/']
+    pages = ['/', '/about/', '/experience/', '/academics/', '/skills/', '/projects/', '/contact/', '/privacy/']
     for page in pages:
         soup = fetch_soup(client, page)
         title = soup.title.string.strip() if soup.title else ''
@@ -33,7 +33,7 @@ def test_unique_titles(client):
 
 def test_unique_meta_descriptions(client):
     descs = {}
-    pages = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/', '/privacy/']
+    pages = ['/', '/about/', '/experience/', '/academics/', '/skills/', '/projects/', '/contact/', '/privacy/']
     for page in pages:
         soup = fetch_soup(client, page)
         meta = soup.find('meta', attrs={'name': 'description'})
@@ -43,7 +43,7 @@ def test_unique_meta_descriptions(client):
         assert desc not in descs, f'{page} has duplicate meta description'
 
 def test_images_have_alt(client):
-    pages = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/']
+    pages = ['/', '/about/', '/experience/', '/academics/', '/education/', '/skills/', '/projects/', '/contact/']
     for page in pages:
         soup = fetch_soup(client, page)
         for img in soup.find_all('img'):
@@ -59,14 +59,33 @@ def test_json_ld_valid(client):
     assert data['@type'] == 'Person'
     assert data['name'] == 'Harmanan Gurvinder Kohli'
 
+def test_og_image_asset_exists(client):
+    soup = fetch_soup(client, '/')
+    image = soup.find('meta', property='og:image')
+    assert image
+    image_url = image.get('content', '')
+    assert image_url.endswith('/static/img/og-image.svg')
+
+    rv = client.get('/static/img/og-image.svg')
+    assert rv.status_code == 200
+    assert rv.mimetype == 'image/svg+xml'
+
 def test_sitemap_contains_all_routes(client):
     rv = client.get('/sitemap.xml')
     soup = BeautifulSoup(rv.data, 'xml')
     urls = [loc.text for loc in soup.find_all('loc')]
-    expected = ['/', '/about/', '/experience/', '/education/', '/skills/', '/projects/', '/contact/', '/privacy/']
+    expected = ['/', '/about/', '/experience/', '/academics/', '/skills/', '/projects/', '/contact/', '/privacy/']
     site_url = 'https://test.com'
     for path in expected:
         assert f'{site_url}{path}' in urls, f'{path} missing from sitemap'
+
+    assert f'{site_url}/education/' not in urls
+
+def test_education_alias_uses_academics_canonical(client):
+    soup = fetch_soup(client, '/education/')
+    canonical = soup.find('link', rel='canonical')
+    assert canonical
+    assert canonical.get('href') == 'https://test.com/academics/'
 
 def test_robots_txt_valid(client):
     rv = client.get('/robots.txt')

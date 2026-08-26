@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://harmanan.is-a.dev/sitemap.xml
