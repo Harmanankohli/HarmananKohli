@@ -4,7 +4,7 @@
 🎯 **About Me**
 - LLM/AI Engineer experienced in **Agentic AI, RAG, MCP server tools, Text-to-SQL, Multimodal AI, and Explainable AI**.
 - Skilled at building **LLM workflows**, **semantic retrieval systems**, **multi-agent applications**, and **cloud-deployed GenAI solutions**.
-- Proficient with **Python, SQL, LangChain, LangGraph, AWS Bedrock, Databricks, scikit-learn, TensorFlow, SAP**, and more.
+- Proficient with **Python, SQL, LangChain, LangGraph, AWS Bedrock, Databricks, scikit-learn, TensorFlow**, and more.
 - Passionate about building reliable AI systems with strong retrieval quality, evaluation, observability, and responsible AI practices.
 
 🌱 **Currently Exploring**
@@ -13,8 +13,7 @@
 🤝 **Looking to Collaborate On**
 - LLM systems, RAG, agentic workflows, AI tooling, XAI, applied ML, open-source documentation, or research-driven AI projects.
 
-📫 **Reach Me At:** hkohli40@gmail.com  
-💼 [LinkedIn](https://linkedin.com/in/harmanankohli) | 👨‍💻 [GitHub](https://github.com/Harmanankohli) 
+📫 **Reach Me At:** hkohli40@gmail.com | 🌐 [Website](https://harmanan.is-a.dev/) | 💼 [LinkedIn](https://linkedin.com/in/harmanankohli) | 👨‍💻 [GitHub](https://github.com/Harmanankohli)
 
 ---
 
