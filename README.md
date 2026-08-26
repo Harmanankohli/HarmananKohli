@@ -20,9 +20,9 @@
 
 ## 🌟 **Selected Projects**
 - 🔷 [FinSight](https://github.com/Harmanankohli/FinSight): Enterprise multi-agent investment intelligence platform with hybrid RAG, MCP, agent orchestration, RAGAS, and Langfuse. Built using tools like Claude Code, OpenCode, and Mimo Code.
-- 🔷 Financial Document Intelligence System: RAG-based system for long-context financial document reasoning with semantic chunking, vector retrieval, Text-to-SQL, and agentic orchestration.
-- 🔷 Databricks MCP Server Tools: MCP server tooling for secure LLM tool integration and governed AI workflows.
-- 🔷 Multimodal Price Discovery Agent: Gemini Pro Vision + RAG + VectorDB agent for product valuation across 100K+ SKUs.
+- 🔷 Financial Document Intelligence System *(Company project)*: RAG-based system for long-context financial document reasoning with semantic chunking, vector retrieval, Text-to-SQL, and agentic orchestration.
+- 🔷 Databricks MCP Server Tools *(Company project)*: MCP server tooling for secure LLM tool integration and governed AI workflows.
+- 🔷 Multimodal Price Discovery Agent *(Fellowship project)*: Gemini Pro Vision + RAG + VectorDB agent for product valuation across 100K+ SKUs.
 - 🔷 Open-Source Contributions: [f_regression()](https://github.com/scikit-learn/scikit-learn/pull/28104) and [silhouette_score()](https://github.com/scikit-learn/scikit-learn/pull/28125) examples added to Scikit-learn documentation.
 ---
 
