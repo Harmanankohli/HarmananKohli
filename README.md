@@ -1,17 +1,17 @@
 <h1 align="center">Hi 👋, I'm Harmanan Kohli</h1>
-<h3 align="center">Data Scientist | AI/ML Engineer | NLP & Generative AI Enthusiast</h3>
+<h3 align="center">LLM/AI Engineer | Data Scientist | Agentic AI & RAG Systems</h3>
 
 🎯 **About Me**
-- Data Scientist experienced in **Analytics, ML, NLP, Explainable AI, and Generative AI**.
-- Skilled at building **predictive models**, **XAI pipelines**, and **scalable GenAI solutions**.
-- Proficient with **Python, SQL, TensorFlow, Keras, LangChain, Azure, SAP**, and more.
-- Passionate about applying AI responsibly to solve business and societal challenges.
+- LLM/AI Engineer experienced in **Agentic AI, RAG, MCP server tools, Text-to-SQL, Multimodal AI, and Explainable AI**.
+- Skilled at building **LLM workflows**, **semantic retrieval systems**, **multi-agent applications**, and **cloud-deployed GenAI solutions**.
+- Proficient with **Python, SQL, LangChain, LangGraph, AWS Bedrock, Databricks, scikit-learn, TensorFlow, SAP**, and more.
+- Passionate about building reliable AI systems with strong retrieval quality, evaluation, observability, and responsible AI practices.
 
 🌱 **Currently Exploring**
-- Generative AI applications, **LLM system design**, and multimodal intelligence.
+- LLM system design, **multi-agent orchestration**, Model Context Protocol (MCP), hybrid retrieval, AI systems evaluation, and memory-augmented agents.
 
 🤝 **Looking to Collaborate On**
-- AI/ML, NLP, GenAI, XAI, or research-driven Data Science projects.
+- LLM systems, RAG, agentic workflows, AI tooling, XAI, applied ML, open-source documentation, or research-driven AI projects.
 
 📫 **Reach Me At:** hkohli40@gmail.com  
 💼 [LinkedIn](https://linkedin.com/in/harmanankohli) | 👨‍💻 [GitHub](https://github.com/Harmanankohli) 
@@ -19,8 +19,10 @@
 ---
 
 ## 🌟 **Selected Projects**
-- 🔷 [Automated PDF Classification App](https://pdf-electrical-classification.streamlit.app/): NLP & XGBoost-based Streamlit app to classify product PDFs.
-- 🔷 [Census Income Clustering](https://github.com/Harmanankohli/census-income-clustering): KMeans clustering for customer segmentation with EDA & PCA.
+- 🔷 [FinSight](https://github.com/Harmanankohli/FinSight): Enterprise multi-agent investment intelligence platform with hybrid RAG, MCP, agent orchestration, RAGAS, and Langfuse. Built using tools like Claude Code, OpenCode, and Mimo Code.
+- 🔷 Financial Document Intelligence System: RAG-based system for long-context financial document reasoning with semantic chunking, vector retrieval, Text-to-SQL, and agentic orchestration.
+- 🔷 Databricks MCP Server Tools: MCP server tooling for secure LLM tool integration and governed AI workflows.
+- 🔷 Multimodal Price Discovery Agent: Gemini Pro Vision + RAG + VectorDB agent for product valuation across 100K+ SKUs.
 - 🔷 Open-Source Contributions: [f_regression()](https://github.com/scikit-learn/scikit-learn/pull/28104) and [silhouette_score()](https://github.com/scikit-learn/scikit-learn/pull/28125) examples added to Scikit-learn documentation.
 ---
 
@@ -48,6 +50,6 @@
 <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="40" height="40"/>
 </p>
 
+**AI Systems & Tooling:** LangChain, LangGraph, RAG, MCP, VectorDB, Bedrock Agents, LlamaIndex, CrewAI, RAGAS, Langfuse, Claude Code, OpenCode, Mimo Code
 
-
-<h3 align="center">🌟 Let's Build the Future with Responsible AI 🌟</h3>
+<h3 align="center">🌟 Building Reliable AI Systems with Responsible AI 🌟</h3>
