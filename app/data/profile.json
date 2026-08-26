@@ -8,7 +8,7 @@
   "github": "https://github.com/Harmanankohli",
   "linkedin": "https://linkedin.com/in/harmanankohli",
   "summary": {
-    "professional": "LLM/AI Engineer with experience building agentic workflows, RAG systems, Text-to-SQL tools, embeddings pipelines, and multimodal LLM applications, deployed in cloud environments. Strong background across ML, NLP, Explainable AI, Deep Learning, and enterprise analytics.",
+    "professional": "LLM/AI Engineer with experience building agentic workflows, RAG systems, MCP server tools, Text-to-SQL tools, embeddings pipelines, and multimodal LLM applications, deployed in cloud environments. Strong background across ML, NLP, Explainable AI, Deep Learning, and enterprise analytics.",
     "academic": "Researcher in LLM Systems, RAG, Agentic Workflows, Explainable AI, AI Security, Multimodal AI, and NLP."
   },
   "open_to": ["Full-time roles", "Research collaborations", "Consulting", "Open-source contributions"],
@@ -38,7 +38,7 @@
   "what_i_do": [
     {
       "title": "LLM & Agentic Systems",
-      "description": "LangChain, LangGraph, RAG, Bedrock Agents",
+      "description": "LangChain, LangGraph, RAG, MCP, Bedrock Agents",
       "icon": "brain"
     },
     {

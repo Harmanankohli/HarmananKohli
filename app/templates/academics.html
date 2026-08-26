@@ -72,6 +72,30 @@
         </div>
         {% endfor %}
 
+        {% if academics.projects %}
+        <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Academic Projects</h2>
+
+        {% for project in academics.projects %}
+        <div class="acad-card animate-on-scroll">
+            <div class="acad-card__section">
+                <h3 class="acad-card__section-title">{{ project.title }}</h3>
+                <p class="acad-card__diss-period">{{ project.role }} &middot; {{ project.period }}</p>
+                <p class="acad-card__diss-summary">{{ project.summary }}</p>
+                <ul class="acad-card__diss-bullets">
+                    {% for bullet in project.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="acad-card__diss-tech">
+                    {% for tech in project.tech %}
+                    <span class="tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
         <h2 class="section__title animate-on-scroll" style="margin-top: var(--space-3xl)">Certifications</h2>
 
         <div class="acad-certs">

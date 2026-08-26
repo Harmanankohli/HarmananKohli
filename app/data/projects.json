@@ -10,6 +10,16 @@
     "link": null
   },
   {
+    "id": "databricks-mcp-server",
+    "title": "Databricks MCP Server Tools",
+    "company": "Capgemini",
+    "description": "Internal Model Context Protocol server for secure LLM tool integration in Databricks workflows",
+    "highlights": "MCP server tools, internal app deployment, governed tool access for LLM-driven workflows",
+    "tech": ["MCP", "Databricks", "LLM Tools", "Python", "Internal Apps"],
+    "type": "Enterprise",
+    "link": null
+  },
+  {
     "id": "ai-product-accelerator",
     "title": "AI-Powered Product Accelerator",
     "company": "Capgemini",
@@ -17,6 +27,16 @@
     "tech": ["Multi-agent architecture", "LLM", "Image analysis"],
     "type": "Enterprise",
     "link": null
+  },
+  {
+    "id": "finsight-investment-intelligence",
+    "title": "FinSight: Enterprise Multi-Agent Investment Intelligence Platform",
+    "company": "Independent Personal Project",
+    "description": "Multi-agent AI platform for investment research with retrieval, quantitative analysis, market intelligence, analytics, and response validation agents",
+    "highlights": "Framework-agnostic agent architecture, unified MCP server, hybrid RAG, RAGAS and Langfuse evaluation; built with Claude Code, OpenCode, and Mimo Code",
+    "tech": ["Google ADK", "LangGraph", "LangChain", "LlamaIndex", "CrewAI", "MCP", "A2A Protocol", "RAGAS", "Langfuse", "Claude Code", "OpenCode", "Mimo Code"],
+    "type": "Personal",
+    "link": "https://github.com/Harmanankohli/FinSight"
   },
   {
     "id": "multimodal-price-discovery",

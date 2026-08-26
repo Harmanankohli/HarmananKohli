@@ -6,7 +6,11 @@
     "Explainable AI",
     "AI Security",
     "Multimodal AI",
-    "Natural Language Processing"
+    "Natural Language Processing",
+    "Semantic Retrieval",
+    "Memory-Augmented Agents",
+    "Tool-Using AI Systems",
+    "AI Systems Evaluation"
   ],
   "education": [
     {
@@ -50,6 +54,22 @@
         "Data Structures and Algorithms"
       ],
       "dissertation": null
+    }
+  ],
+  "projects": [
+    {
+      "title": "FinSight: Enterprise Multi-Agent Investment Intelligence Platform",
+      "role": "Independent Personal Project",
+      "period": "May 2026 – Present",
+      "summary": "Architected a multi-agent AI platform for investment research, orchestrating specialized agents for retrieval, quantitative analysis, market intelligence, analytics, and response validation.",
+      "bullets": [
+        "Designed a framework-agnostic agent architecture using Google ADK, LangGraph, LangChain, LlamaIndex, CrewAI, PydanticAI, OpenAI Agents SDK, and the Agent-to-Agent (A2A) Protocol.",
+        "Implemented a unified Model Context Protocol (MCP) server exposing structured financial data, SEC filings, and external knowledge sources.",
+        "Built hybrid RAG with dense retrieval, BM25 search, reranking, metadata filtering, and persistent conversational memory.",
+        "Designed evaluation and observability pipelines using RAGAS and Langfuse to analyze retrieval quality, reasoning performance, hallucinations, and end-to-end system behavior.",
+        "Developed the platform using AI coding tools including Claude Code, OpenCode, and Mimo Code."
+      ],
+      "tech": ["Google ADK", "LangGraph", "LangChain", "LlamaIndex", "CrewAI", "MCP", "A2A Protocol", "RAGAS", "Langfuse", "Claude Code", "OpenCode", "Mimo Code"]
     }
   ],
   "certifications": [
